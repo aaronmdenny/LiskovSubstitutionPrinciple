@@ -19,6 +19,8 @@ namespace ConsoleUI
              * 
              * You also cannot weaken post-conditions. If your base virtual method returns values within a specific
              * range, you cannot go beyond that range for the returned values in any child override methods.
+             * 
+             * Also, do not throw new exceptions in child methods. The new exception may not be expected.
              */
 
             Manager accountingVP = new Manager();
