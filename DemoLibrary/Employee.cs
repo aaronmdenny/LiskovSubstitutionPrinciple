@@ -10,6 +10,8 @@
 
         public decimal Salary { get; set; }
 
+        // Currently, the CEO fails the 'is-a' relationship needed for inheritance to be appropriate. The CEO should
+        // not be assigned any manager.
         public virtual void AssignManager(Employee manager)
         {
             // Simulate doing other tasks here - otherwise, this should be a property set statement, not a method.
