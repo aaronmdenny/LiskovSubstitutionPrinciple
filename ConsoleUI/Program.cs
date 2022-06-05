@@ -13,6 +13,12 @@ namespace ConsoleUI
              * 
              * In this example, we should be able to replace the emp variable with an object of type Manager without
              * breaking the program.
+             * 
+             * Also note, that you cannot perform more specific checks on the input in child class methods that override
+             * base class methods. You cannot strengthen pre-conditions.
+             * 
+             * You also cannot weaken post-conditions. If your base virtual method returns values within a specific
+             * range, you cannot go beyond that range for the returned values in any child override methods.
              */
 
             Manager accountingVP = new Manager();
@@ -21,7 +27,7 @@ namespace ConsoleUI
             accountingVP.LastName = "Stone";
             accountingVP.CalculatePerHourRate(4);
 
-            Employee emp = new Employee();
+            Employee emp = new CEO();
 
             emp.FirstName = "Tim";
             emp.LastName = "Corey";
