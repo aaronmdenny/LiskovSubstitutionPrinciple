@@ -1,6 +1,7 @@
 ﻿namespace DemoLibrary
 {
-    public class BaseEmployee : IEmployee
+    // Make abstract because we never want to use this class directly.
+    public abstract class BaseEmployee : IEmployee
     {
         public string FirstName { get; set; }
 

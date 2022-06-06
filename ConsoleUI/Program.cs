@@ -23,13 +23,19 @@ namespace ConsoleUI
              * Also, do not throw new exceptions in child methods. The new exception may not be expected.
              */
 
-            Manager accountingVP = new Manager();
+            IManager accountingVP = new Manager();
 
             accountingVP.FirstName = "Emma";
             accountingVP.LastName = "Stone";
             accountingVP.CalculatePerHourRate(4);
 
-            Employee emp = new CEO();
+            /*
+             * The application is now LSP compliant. We can use sub-classes in place of base classes without breaking
+             * anything.
+             * 
+             * We use IManaged to retain use of AssignManager() below.
+             */
+            IManaged emp = new Employee();
 
             emp.FirstName = "Tim";
             emp.LastName = "Corey";
